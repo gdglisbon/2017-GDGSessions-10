@@ -8,12 +8,6 @@
 		<link rel="stylesheet" href="/assets/css/main.css" />
 		<!--[if lte IE 9]><link rel="stylesheet" href="/assets/css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="/assets/css/ie8.css" /><![endif]-->
-    <style>
-      #map {
-        height: 400px;
-        width: 100%;
-       }
-    </style>
 	</head>
 	<body>
 
@@ -145,20 +139,9 @@
 								<div class="inner">
 									<h2 class="major">Local</h2>
 									<h1>Auditório do Complexo Interdisciplinar, Instituto Superior Técnico</h1>
-										<div id="map"></div>
-										<script>
-										function initMap() {
-											var uluru = {lat: 38.736156, lng: -9.140065};
-											var map = new google.maps.Map(document.getElementById('map'), {
-											zoom: 17,
-											center: uluru
-											});
-											var marker = new google.maps.Marker({
-											position: uluru,
-											map: map
-											});
-										}
-										</script>
+									<img border="0" src="https://maps.googleapis.com/maps/api/staticmap?center=38.736185,-9.140088&amp;size=1200x300&amp;maptype=roadmap&amp;markers=38.736185,-9.140088">
+									<a href="https://goo.gl/maps/GHkCZBb9sq42"><br/><u>(google map)</u></a>
+
 								</div>
 							</section>
 							<section id="six" class="wrapper alt style1">
@@ -199,8 +182,5 @@
 			ga('send', 'pageview');
 
 			</script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJpF_SGqJ_8A6YuPM_h5snzztG7NkiElo&callback=initMap">
-    </script>
 	</body>
 </html>
