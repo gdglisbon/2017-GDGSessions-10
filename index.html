@@ -8,6 +8,12 @@
 		<link rel="stylesheet" href="/assets/css/main.css" />
 		<!--[if lte IE 9]><link rel="stylesheet" href="/assets/css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="/assets/css/ie8.css" /><![endif]-->
+    <style>
+      #map {
+        height: 400px;
+        width: 100%;
+       }
+    </style>
 	</head>
 	<body>
 
@@ -38,7 +44,7 @@
 						<!-- One -->
 							<section id="one" class="wrapper spotlight style1">
 								<div class="inner">
-									<a href="#" class="image"><img src="/images/RaulRaja.jpg" alt="" /></a>
+									<a href="#" class="image"><img src="/images/RaulRaja.jpg" alt="Raul Raja" /></a>
 									<div class="content">
 										<h2 class="major">Raul Raja</h2>
 										<h3>Functional Error Handling</h3>
@@ -53,7 +59,7 @@
 						<!-- Two -->
 							<section id="two" class="wrapper alt spotlight style2">
 								<div class="inner">
-									<a href="#" class="image"><img src="/images/maduarte.jpg" alt="" /></a>
+									<a href="#" class="image"><img src="/images/maduarte.jpg" alt="Miguel Duarte" /></a>
 									<div class="content">
 										<h2 class="major">Miguel Duarte</h2>
 										<h3>Modern Java with Javaslang and Lombok</h3>
@@ -101,13 +107,13 @@
 											<a href="https://www.meetup.com/pt-jug/events/238586533/"><h1><u>PT.JUG Meetup</u></h1></a>
 											<br/>
 											<a href="https://www.meetup.com/pt-jug/events/238586533/" class="image">
-											<img src="/images/logo-landscape-300dpi.png" alt="" /></a>
+											<img src="/images/logo-landscape-300dpi.png" alt="logo PT.JUG" /></a>
 										</article>
 								
 										<article>
 											<a href="https://www.meetup.com/gdglisbon/events/238560031/"><h1><u>GDGLx Meetup</u></h1></a>
 											<br/>
-											<a href="https://www.meetup.com/gdglisbon/events/238560031/" class="image"><img height="160px" src="/images/logo_gdglx_horizontal_white.svg" alt="" /></a>
+											<a href="https://www.meetup.com/gdglisbon/events/238560031/" class="image"><img height="160px" src="/images/logo_gdglx_horizontal_white.svg" alt="logo GDGLx" /></a>
 										</article>
 								</section>
 							</div>
@@ -134,6 +140,36 @@
 									</section>
 								</div>
 							</section>
+
+							<section id="six" class="wrapper alt style2">
+								<div class="inner">
+									<h2 class="major">Local</h2>
+									<h1>Auditório do Complexo Interdisciplinar, Instituto Superior Técnico</h1>
+										<div id="map"></div>
+										<script>
+										function initMap() {
+											var uluru = {lat: 38.736156, lng: -9.140065};
+											var map = new google.maps.Map(document.getElementById('map'), {
+											zoom: 17,
+											center: uluru
+											});
+											var marker = new google.maps.Marker({
+											position: uluru,
+											map: map
+											});
+										}
+										</script>
+								</div>
+							</section>
+							<section id="six" class="wrapper alt style1">
+								<div class="inner">
+									<h2 class="major">Com apoio de</h2>
+									<img src="/images/IST_A_RGB_NEG.png" alt="logo IST" />
+								</div>
+							</section>
+
+
+
 
 					</section>
 
@@ -163,5 +199,8 @@
 			ga('send', 'pageview');
 
 			</script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJpF_SGqJ_8A6YuPM_h5snzztG7NkiElo&callback=initMap">
+    </script>
 	</body>
 </html>
